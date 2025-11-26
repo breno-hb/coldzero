@@ -1,0 +1,304 @@
+/* Oculta itens da navegação conforme a largura da tela */
+@media (max-width: 1150px) {
+.navegacaoPrincipal li:nth-child(3) {
+    display: none;
+    }
+}
+@media (max-width: 1000px) {
+.navegacaoPrincipal li:nth-child(4) {
+    display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .navegacaoPrincipal li:nth-child(5) {
+        display: none;
+    }
+    .navegacaoPrincipal li:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .contato li:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .contato li:nth-child(1) {
+        display: none;
+    }
+}
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 10, 10);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ocupa o espaço restante para o footer */
+main {
+    flex: 1;
+}
+
+/* Cabeçalho completo */
+.tituloNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid rgb(175, 9, 9);
+}
+
+/* Contida em TituloNav que agrupa o título e o subtítulo */
+.tituloBox {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    min-width: 15rem;
+}
+
+/* Título principal da página */
+.tituloBox h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Subtítulo da página */
+.tituloBox h3 {
+    margin: 0;
+    margin-top: -0.5rem;
+    margin-left: 5.9rem;
+    color: rgb(175, 9, 9);
+}
+
+/* Contém toda navegação do cabeçalho */
+.navegacaoPrincipal {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+/* Links de navegação do cabeçalho */
+.navegacaoPrincipal a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Efeito após passar o mouse sobre os links de navegação */
+.navegacaoPrincipal a:hover {
+    color: rgb(175, 9, 9);
+}
+
+/* Navegação de contato e sobre a página */
+.contato {
+    display: flex;
+    gap: 2rem;
+    list-style: none;;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Links de contato e sobre a página */
+.contato a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Efeito após passar o mouse sobre os links de contato e sobre a página */
+.contato a:hover {
+    color: rgb(175, 9, 9);
+}
+
+/* Input para busca em toda página */
+.inputBusca {
+    display: flex;
+    justify-content: end;
+    margin-top: 1vh;
+    margin-right: 4vw;
+}
+
+/* Campo de busca */
+.busca {
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 40vw;
+    height: 3vh;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(150, 150, 150);
+    background: linear-gradient(to right, rgb(44, 43, 43), rgb(95, 18, 18));
+    max-width: 330px;
+    min-width: 290px;
+    min-height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Botão para o input de busca */
+.botaoBusca {
+    background-color: rgb(95, 18, 18);
+    border: 2px solid transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    border-left: 2px solid rgb(26, 4, 4);
+}
+
+/* Efeito após passar o mouse sobre o botão de busca */
+.botaoBusca:hover {
+    background-color: rgb(175, 9, 9);
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+
+/* Remove a borda ao clicar no campo de busca */
+.busca:focus {
+    outline: none;
+}
+
+/* Seção de toda div das notícias principais */
+.noticiaPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    flex-direction: row;
+    color: white;
+    justify-content: space-evenly;
+}
+
+/* Título do caso da semana */
+.casoSemana h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 11, 11);
+    width: 18rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+/* Título do caso da semana com efeito de gradiente */
+.relatorio h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, rgb(209, 56, 56), rgb(236, 236, 236));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+/* Container do caso da semana */
+.casoSemana {
+    max-width: 40rem;
+    min-width: 10rem;
+}
+
+/* Container do caso da semana entre a imagem, h3 e o parágrafo */
+.relatorio {
+    display: flex;
+    
+    gap: 2rem;
+}
+
+/* Botão saiba mais do caso da semana */
+.saibaMais {
+    background-color: rgb(128, 11, 11);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    width: 5rem;
+    height: 1.4rem;
+    border-radius: 5px;
+}
+
+/* Efeito após passar o mouse sobre o botão saiba mais */
+.saibaMais:hover {
+    background-color: rgb(175, 9, 9);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+/* Imagem do caso da semana */
+.relatorio img {
+    width: 15rem;
+    max-height: 250px;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+/* Seção de artigos sobre criminosos que restringe o seu tamanho*/
+.criminosos {
+    max-width: 40rem;
+}
+
+/* Título da seção de artigos sobre criminosos */
+.criminosos h2 {
+    display: flex;
+    background: linear-gradient(to right, rgb(161, 161, 161), rgb(230, 18, 18));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    justify-content: center;
+    font-size: 1.9rem;
+}
+
+/* Container de todos os artigos sobre criminosos famosos */
+.artigosCriminosos {
+    display:flex;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Links dos artigos sobre criminosos famosos */
+.artigosCriminosos a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+/* Efeito após passar o mouse sobre os links dos artigos sobre criminosos famosos */
+.artigosCriminosos a:hover {
+    color: rgb(175, 9, 9);
+}
+
+/* Imagens dos artigos sobre criminosos famosos */
+.artigosCriminosos img {
+    width: 15vw;
+    height: 130px;
+    max-width: 100px;
+    min-width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo do rodapé */
+.copy {
+    display: flex;
+    background: linear-gradient(to right, rgb(226, 226, 226), rgb(92, 90, 90));
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 20px;
+    padding: 0;
+}
