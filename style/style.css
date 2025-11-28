@@ -43,6 +43,8 @@ body {
 /* Ocupa o espaço restante para o footer */
 main {
     flex: 1;
+    max-width: 2000px;
+    margin: auto;
 }
 
 /* Cabeçalho completo */
@@ -176,11 +178,14 @@ main {
 .noticiaPrincipal{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     margin-top: 2rem;
-    flex-direction: row;
     color: white;
-    justify-content: space-evenly;
+}
+
+/* Container do caso da semana */
+.casoSemana {
+    max-width: 40rem;
+    min-width: 10rem;
 }
 
 /* Título do caso da semana */
@@ -195,6 +200,12 @@ main {
     border-radius: 3px;
 }
 
+/* Container do caso da semana entre a imagem, h3 e o parágrafo */
+.relatorio {
+    display: flex;
+    gap: 2rem;
+}
+
 /* Título do caso da semana com efeito de gradiente */
 .relatorio h3 {
     font-size: 1.5rem;
@@ -202,19 +213,6 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-}
-
-/* Container do caso da semana */
-.casoSemana {
-    max-width: 40rem;
-    min-width: 10rem;
-}
-
-/* Container do caso da semana entre a imagem, h3 e o parágrafo */
-.relatorio {
-    display: flex;
-    
-    gap: 2rem;
 }
 
 /* Botão saiba mais do caso da semana */
@@ -246,6 +244,7 @@ main {
 /* Seção de artigos sobre criminosos que restringe o seu tamanho*/
 .criminosos {
     max-width: 40rem;
+    margin-left: 2rem;
 }
 
 /* Título da seção de artigos sobre criminosos */
@@ -260,7 +259,7 @@ main {
 }
 
 /* Container de todos os artigos sobre criminosos famosos */
-.artigosCriminosos {
+.artigosCriminosos, .visivel {
     display:flex;
     text-transform: uppercase;
     flex-wrap: wrap;
@@ -269,7 +268,7 @@ main {
 }
 
 /* Links dos artigos sobre criminosos famosos */
-.artigosCriminosos a {
+.artigosCriminosos a, .visivel a {
     text-decoration: none;
     color: white;
     font-family: 'Times New Roman', Times, serif;
@@ -278,18 +277,67 @@ main {
 }
 
 /* Efeito após passar o mouse sobre os links dos artigos sobre criminosos famosos */
-.artigosCriminosos a:hover {
+.artigosCriminosos a:hover, .visivel a:hover {
     color: rgb(175, 9, 9);
 }
 
 /* Imagens dos artigos sobre criminosos famosos */
-.artigosCriminosos img {
+.artigosCriminosos img, .oculto img {
     width: 15vw;
     height: 130px;
     max-width: 100px;
     min-width: 150px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* Itens ocultos inicialmente para partes do artigo sobre criminosos */
+.oculto {
+    display: none;
+}
+
+/* Container do botão ver mais */
+.verMais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do botão ver mais */
+.botao {
+    margin-bottom: 2rem;
+    border: none;
+    cursor: pointer;
+    color: rgb(202, 202, 202);
+    background-color: rgb(10, 10, 10);
+    border-top: 2px solid rgb(202, 202, 202);
+    border-bottom: 2px solid rgb(202, 202, 202);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+/* Efeito após passar o mouse sobre o botão ver mais */
+.botao:hover {
+    color: rgb(148, 34, 34);
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.procuradosDestaque {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.procuradosDestaque h2 {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(161, 161, 161), rgb(230, 18, 18));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.9rem;
 }
 
 /* Estilo do rodapé */
@@ -301,4 +349,36 @@ main {
     flex: 0 0 auto;
     height: 20px;
     padding: 0;
+}
+
+#procurados {
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 10vw;
+    max-width: 100px;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.card p {
+    font-size: 12px;
+    margin: 0;
 }
